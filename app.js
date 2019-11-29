@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var userLogin = require('./routes/login');
 var userPosts = require('./routes/posts');
 
 var bodyParser = require('body-parser');/*post方法*/
@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/login', userLogin);
 app.use('/posts', userPosts);
 
 app.use(bodyParser.json());// 添加json解析
