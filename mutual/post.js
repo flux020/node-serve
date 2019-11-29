@@ -15,8 +15,6 @@
                 msg: '操作失败'
             });
         } else {
-            console.log(ret);
-
             res.json(ret);
         }
     };
